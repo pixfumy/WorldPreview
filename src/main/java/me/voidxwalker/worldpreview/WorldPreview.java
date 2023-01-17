@@ -30,7 +30,7 @@ public class WorldPreview implements ClientModInitializer {
    public static boolean canFreeze;
    public static KeyBinding freezeKey;
    public static boolean freezePreview;
-   public static boolean atumLoaded;
+   public static AtumInterface atumInterface;
    public static final Object lock= new Object();
    public static Logger LOGGER = LogManager.getLogger();
 
@@ -47,7 +47,7 @@ public class WorldPreview implements ClientModInitializer {
       WorldPreview.canFreeze = false;
       WorldPreview.loadedSpawn = false;
       WorldPreview.canReload = true;
-      WorldPreview.atumLoaded = FabricLoader.getInstance().isModLoaded("atum");
+      WorldPreview.atumInterface = FabricLoader.getInstance().isModLoaded("atum") ? new AtumInterface() : null;
       KeyBinding.unpressAll();
    }
 }

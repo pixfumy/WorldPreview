@@ -11,6 +11,6 @@ import java.util.List;
 @Mixin(ClientChunkProvider.class)
 public interface ClientChunkProviderMixin {
     @Accessor
-    LongObjectStorage<Chunk> getChunkStorage();
+    LongObjectStorage getChunkStorage();
     @Accessor List<Chunk> getChunks();
 }

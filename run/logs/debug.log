@@ -1,90 +1,187 @@
-[04:57:25] [main/INFO] (FabricLoader/GameProvider) Loading Minecraft 1.8.9 with Fabric Loader 0.12.12
-[04:57:25] [main/DEBUG] (FabricLoader/GameRemap) Requesting deobfuscation of {client=C:\Users\asadd\.gradle\caches\fabric-loom\1.8.9\net.legacyfabric.yarn.1_8_9.1.8.9+build.451-v2\minecraft-merged-named.jar}
-[04:57:25] [main/DEBUG] (FabricLoader/GamePatch) Found game constructor: net.minecraft.client.main.Main -> net.minecraft.client.MinecraftClient
-[04:57:25] [main/DEBUG] (FabricLoader/GamePatch) Patching game constructor initializeGame()V
-[04:57:25] [main/DEBUG] (FabricLoader/GamePatch) Run directory field is thought to be net/minecraft/client/MinecraftClient/runDirectory
-[04:57:25] [main/DEBUG] (FabricLoader/GamePatch) Applying brand name hook to net/minecraft/client/ClientBrandRetriever::getClientModName
-[04:57:25] [main/DEBUG] (FabricLoader/GamePatch) Applying brand name hook to net/minecraft/server/MinecraftServer::getServerModName
-[04:57:25] [main/DEBUG] (FabricLoader/GamePatch) Patched 3 classs
-[04:57:25] [main/DEBUG] (FabricLoader/Discovery) Mod discovery time: 12.3 ms
-[04:57:25] [main/DEBUG] (FabricLoader/Resolution) Mod resolution time: 33.9 ms
-[04:57:25] [main/INFO] (FabricLoader) Loading 4 mods:
+[18:08:40] [main/INFO] (FabricLoader/GameProvider) Loading Minecraft 1.7.10 with Fabric Loader 0.12.12
+[18:08:40] [main/DEBUG] (FabricLoader/GameRemap) Requesting deobfuscation of {client=C:\Users\asadd\.gradle\caches\fabric-loom\1.7.10\net.legacyfabric.yarn.1_7_10.1.7.10+build.458-v2\minecraft-merged-named.jar}
+[18:08:40] [main/DEBUG] (FabricLoader/GamePatch) Found game constructor: net.minecraft.client.main.Main -> net.minecraft.client.MinecraftClient
+[18:08:40] [main/DEBUG] (FabricLoader/GamePatch) Patching game constructor initializeGame()V
+[18:08:40] [main/DEBUG] (FabricLoader/GamePatch) Run directory field is thought to be net/minecraft/client/MinecraftClient/runDirectory
+[18:08:40] [main/DEBUG] (FabricLoader/GamePatch) Applying brand name hook to net/minecraft/client/ClientBrandRetriever::getClientModName
+[18:08:40] [main/DEBUG] (FabricLoader/GamePatch) Applying brand name hook to net/minecraft/server/MinecraftServer::getServerModName
+[18:08:40] [main/DEBUG] (FabricLoader/GamePatch) Patched 3 classs
+[18:08:40] [main/DEBUG] (FabricLoader/Discovery) Mod discovery time: 10.8 ms
+[18:08:40] [main/DEBUG] (FabricLoader/Resolution) Mod resolution time: 30.1 ms
+[18:08:40] [main/INFO] (FabricLoader) Loading 5 mods:
+	- atum 1.1.3+1.7.10
 	- fabricloader 0.12.12
 	- java 17
-	- minecraft 1.8.9
-	- worldpreview BETA5+1.8.9
-[04:57:25] [main/DEBUG] (FabricLoader/Knot) Adding C:\Users\asadd\Desktop\WorldPreview\build\resources\main to classpath.
-[04:57:25] [main/DEBUG] (FabricLoader/Knot) Adding C:\Users\asadd\Desktop\WorldPreview\build\classes\java\main to classpath.
-[04:57:25] [main/WARN] (FabricLoader/Metadata) Mod `worldpreview` (BETA5+1.8.9) does not respect SemVer - comparison support is limited.
-[04:57:25] [main/DEBUG] (FabricLoader/Entrypoint) Registering new-style initializer me.voidxwalker.worldpreview.WorldPreview for mod worldpreview (key client)
-[04:57:25] [main/DEBUG] (FabricLoader/Mixin) Mixin bootstrap service org.spongepowered.asm.service.mojang.MixinServiceLaunchWrapperBootstrap is not available: LaunchWrapper is not available
-[04:57:25] [main/DEBUG] (FabricLoader/Mixin) Mixin bootstrap service org.spongepowered.asm.service.modlauncher.MixinServiceModLauncherBootstrap is not available: ModLauncher is not available
-[04:57:25] [main/DEBUG] (FabricLoader/Mixin) MixinService [Knot/Fabric] was successfully booted in jdk.internal.loader.ClassLoaders$AppClassLoader@1d44bcfa
-[04:57:25] [main/INFO] (FabricLoader/Mixin) SpongePowered MIXIN Subsystem Version=0.8.4 Source=file:/C:/Users/asadd/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.10.7+mixin.0.8.4/7a4ca9d54d9ae564dea0363d668036a8420ed9b8/sponge-mixin-0.10.7+mixin.0.8.4.jar Service=Knot/Fabric Env=CLIENT
-[04:57:25] [main/DEBUG] (FabricLoader/Mixin) Error cleaning class output directory: .mixin.out
-[04:57:25] [main/DEBUG] (FabricLoader/Mixin) Initialising Mixin Platform Manager
-[04:57:25] [main/DEBUG] (FabricLoader/Mixin) Adding mixin platform agents for container ContainerHandleURI(file:/C:/Users/asadd/Desktop/WorldPreview/.gradle/loom-cache/remapped_mods/net_legacyfabric_yarn_1_8_9_1_8_9_build_451_v2/net/fabricmc/fabric-loader/0.12.12/fabric-loader-0.12.12.jar)
-[04:57:25] [main/DEBUG] (FabricLoader/Mixin) Instancing new MixinPlatformAgentDefault for ContainerHandleURI(file:/C:/Users/asadd/Desktop/WorldPreview/.gradle/loom-cache/remapped_mods/net_legacyfabric_yarn_1_8_9_1_8_9_build_451_v2/net/fabricmc/fabric-loader/0.12.12/fabric-loader-0.12.12.jar)
-[04:57:25] [main/DEBUG] (FabricLoader/Mixin) MixinPlatformAgentDefault accepted container ContainerHandleURI(file:/C:/Users/asadd/Desktop/WorldPreview/.gradle/loom-cache/remapped_mods/net_legacyfabric_yarn_1_8_9_1_8_9_build_451_v2/net/fabricmc/fabric-loader/0.12.12/fabric-loader-0.12.12.jar)
-[04:57:25] [main/DEBUG] (FabricLoader/Mixin) Instancing new MixinPlatformAgentDefault for ContainerHandleURI(file:/C:/Users/asadd/Desktop/WorldPreview/.gradle/loom-cache/remapped_mods/net_legacyfabric_yarn_1_8_9_1_8_9_build_451_v2/net/fabricmc/fabric-loader/0.12.12/fabric-loader-0.12.12.jar)
-[04:57:25] [main/DEBUG] (FabricLoader/Mixin) MixinPlatformAgentDefault accepted container ContainerHandleURI(file:/C:/Users/asadd/Desktop/WorldPreview/.gradle/loom-cache/remapped_mods/net_legacyfabric_yarn_1_8_9_1_8_9_build_451_v2/net/fabricmc/fabric-loader/0.12.12/fabric-loader-0.12.12.jar)
-[04:57:25] [main/DEBUG] (FabricLoader/Mixin) Processing prepare() for PlatformAgent[MixinPlatformAgentDefault:ContainerHandleURI(file:/C:/Users/asadd/Desktop/WorldPreview/.gradle/loom-cache/remapped_mods/net_legacyfabric_yarn_1_8_9_1_8_9_build_451_v2/net/fabricmc/fabric-loader/0.12.12/fabric-loader-0.12.12.jar)]
-[04:57:25] [main/DEBUG] (FabricLoader/Mixin) Processing prepare() for PlatformAgent[MixinPlatformAgentDefault:ContainerHandleURI(file:/C:/Users/asadd/Desktop/WorldPreview/.gradle/loom-cache/remapped_mods/net_legacyfabric_yarn_1_8_9_1_8_9_build_451_v2/net/fabricmc/fabric-loader/0.12.12/fabric-loader-0.12.12.jar)]
-[04:57:26] [main/DEBUG] (FabricLoader/Mappings) Loading mappings took 42 ms
-[04:57:26] [main/INFO] (FabricLoader/Mixin) Loaded Fabric development mappings for mixin remapper!
-[04:57:26] [main/DEBUG] (FabricLoader/Knot) Adding C:\Users\asadd\.gradle\caches\fabric-loom\1.8.9\net.legacyfabric.yarn.1_8_9.1.8.9+build.451-v2\minecraft-merged-named.jar to classpath.
-[04:57:26] [main/DEBUG] (FabricLoader/Entrypoint) No subscribers for entrypoint 'preLaunch'
-[04:57:26] [main/DEBUG] (FabricLoader/Mixin) Preparing mixins for MixinEnvironment[DEFAULT]
-[04:57:26] [main/DEBUG] (FabricLoader/Mixin) Selecting config worldpreview.mixins.json
-[04:57:26] [main/DEBUG] (FabricLoader/Mixin) Preparing worldpreview.mixins.json (12)
-[04:57:26] [main/DEBUG] (FabricLoader/Mixin) Registering new injector for @Inject with org.spongepowered.asm.mixin.injection.struct.CallbackInjectionInfo
-[04:57:26] [main/DEBUG] (FabricLoader/Mixin) Registering new injector for @ModifyArg with org.spongepowered.asm.mixin.injection.struct.ModifyArgInjectionInfo
-[04:57:26] [main/DEBUG] (FabricLoader/Mixin) Registering new injector for @ModifyArgs with org.spongepowered.asm.mixin.injection.struct.ModifyArgsInjectionInfo
-[04:57:26] [main/DEBUG] (FabricLoader/Mixin) Registering new injector for @Redirect with org.spongepowered.asm.mixin.injection.struct.RedirectInjectionInfo
-[04:57:26] [main/DEBUG] (FabricLoader/Mixin) Registering new injector for @ModifyVariable with org.spongepowered.asm.mixin.injection.struct.ModifyVariableInjectionInfo
-[04:57:26] [main/DEBUG] (FabricLoader/Mixin) Registering new injector for @ModifyConstant with org.spongepowered.asm.mixin.injection.struct.ModifyConstantInjectionInfo
-[04:57:26] [main/DEBUG] (FabricLoader/Mixin) Mixing access.MinecraftClientMixin from worldpreview.mixins.json into net.minecraft.client.MinecraftClient
-[04:57:26] [main/DEBUG] (FabricLoader/Mixin) Mixing client.MinecraftClientMixin from worldpreview.mixins.json into net.minecraft.client.MinecraftClient
-[04:57:26] [main/DEBUG] (FabricLoader/Mixin) worldpreview.mixins.json:client.MinecraftClientMixin->@Inject::worldpreview_onHotKeyPressed(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod worldpreview does use it's CallbackInfo
-[04:57:26] [main/DEBUG] (FabricLoader/Mixin) worldpreview.mixins.json:client.MinecraftClientMixin->@Inject::isExistingWorld(Ljava/lang/String;Ljava/lang/String;Lnet/minecraft/world/level/LevelInfo;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod worldpreview doesn't use it's CallbackInfo
-[04:57:26] [main/DEBUG] (FabricLoader/Mixin) worldpreview.mixins.json:client.MinecraftClientMixin->@Inject::isExistingWorld(Ljava/lang/String;Ljava/lang/String;Lnet/minecraft/world/level/LevelInfo;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod worldpreview has 0 override(s) in child classes
-[04:57:26] [main/DEBUG] (FabricLoader/Mixin) worldpreview.mixins.json:client.MinecraftClientMixin->@Inject::isExistingWorld(Ljava/lang/String;Ljava/lang/String;Lnet/minecraft/world/level/LevelInfo;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod worldpreview won't be passed a CallbackInfo as a result
-[04:57:26] [main/DEBUG] (FabricLoader/Mixin) worldpreview.mixins.json:client.MinecraftClientMixin->@Inject::reset(Lnet/minecraft/client/world/ClientWorld;Ljava/lang/String;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod worldpreview doesn't use it's CallbackInfo
-[04:57:26] [main/DEBUG] (FabricLoader/Mixin) worldpreview.mixins.json:client.MinecraftClientMixin->@Inject::reset(Lnet/minecraft/client/world/ClientWorld;Ljava/lang/String;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod worldpreview has 0 override(s) in child classes
-[04:57:26] [main/DEBUG] (FabricLoader/Mixin) worldpreview.mixins.json:client.MinecraftClientMixin->@Inject::reset(Lnet/minecraft/client/world/ClientWorld;Ljava/lang/String;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod worldpreview won't be passed a CallbackInfo as a result
-[04:57:26] [main/DEBUG] (FabricLoader/Mixin) worldpreview.mixins.json:client.MinecraftClientMixin->@Inject::getWorldPreviewPlayer(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V from mod worldpreview does use it's CallbackInfoReturnable
-[04:57:26] [main/DEBUG] (FabricLoader/Mixin) Mixing server.MinecraftServerMixin from worldpreview.mixins.json into net.minecraft.server.MinecraftServer
-[04:57:26] [main/DEBUG] (FabricLoader/Mixin) worldpreview.mixins.json:server.MinecraftServerMixin->@Inject::worldpreview_getWorld(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod worldpreview doesn't use it's CallbackInfo
-[04:57:26] [main/DEBUG] (FabricLoader/Mixin) worldpreview.mixins.json:server.MinecraftServerMixin->@Inject::worldpreview_getWorld(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod worldpreview has 0 override(s) in child classes
-[04:57:26] [main/DEBUG] (FabricLoader/Mixin) worldpreview.mixins.json:server.MinecraftServerMixin->@Inject::worldpreview_getWorld(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod worldpreview won't be passed a CallbackInfo as a result
-[04:57:26] [main/DEBUG] (FabricLoader/Mixin) worldpreview.mixins.json:server.MinecraftServerMixin->@Inject::resetLastRow(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod worldpreview doesn't use it's CallbackInfo
-[04:57:26] [main/DEBUG] (FabricLoader/Mixin) worldpreview.mixins.json:server.MinecraftServerMixin->@Inject::resetLastRow(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod worldpreview has 0 override(s) in child classes
-[04:57:26] [main/DEBUG] (FabricLoader/Mixin) worldpreview.mixins.json:server.MinecraftServerMixin->@Inject::resetLastRow(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod worldpreview won't be passed a CallbackInfo as a result
-[04:57:26] [main/DEBUG] (FabricLoader/Mixin) worldpreview.mixins.json:server.MinecraftServerMixin->@Inject::kill(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod worldpreview does use it's CallbackInfo
-[04:57:26] [main/DEBUG] (FabricLoader/Mixin) worldpreview.mixins.json:server.MinecraftServerMixin->@Inject::kill2(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod worldpreview does use it's CallbackInfo
-[04:57:26] [main/DEBUG] (FabricLoader/Mixin) worldpreview.mixins.json:server.MinecraftServerMixin->@Inject::kill3(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod worldpreview does use it's CallbackInfo
-[04:57:26] [main/DEBUG] (FabricLoader/Mixin) worldpreview.mixins.json:server.MinecraftServerMixin->@Inject::kill3(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod worldpreview does use it's CallbackInfo
-[04:57:26] [main/INFO] (net.minecraft.client.MinecraftClient) Setting user: Player128
-[04:57:26] [main/INFO] (net.minecraft.client.MinecraftClient) (Session ID is token:FabricMC:Player128)
-[04:57:27] [main/DEBUG] (FabricLoader/Mixin) Mixing client.GameOptionsMixin from worldpreview.mixins.json into net.minecraft.client.options.GameOptions
-[04:57:27] [main/DEBUG] (FabricLoader/Mixin) worldpreview.mixins.json:client.GameOptionsMixin->@Inject::initInject(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod worldpreview doesn't use it's CallbackInfo
-[04:57:27] [main/DEBUG] (FabricLoader/Mixin) worldpreview.mixins.json:client.GameOptionsMixin->@Inject::initInject(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod worldpreview has 0 override(s) in child classes
-[04:57:27] [main/DEBUG] (FabricLoader/Mixin) worldpreview.mixins.json:client.GameOptionsMixin->@Inject::initInject(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod worldpreview won't be passed a CallbackInfo as a result
-[04:57:27] [main/DEBUG] (FabricLoader/Entrypoint) No subscribers for entrypoint 'main'
-[04:57:27] [main/DEBUG] (FabricLoader/Entrypoint) Iterating over entrypoint 'client'
-[04:57:27] [main/INFO] (net.minecraft.client.MinecraftClient) LWJGL Version: 2.9.4
-[04:57:27] [main/INFO] (net.minecraft.resource.ReloadableResourceManagerImpl) Reloading ResourceManager: Default
-[04:57:27] [main/ERROR] (net.minecraft.client.MinecraftClient) Couldn't initialize twitch stream
-[04:57:27] [Sound Library Loader/INFO] (net.minecraft.client.sound.SoundSystem) Starting up SoundSystem...
-[04:57:27] [Thread-4/INFO] (net.minecraft.client.sound.SoundSystem) Initializing LWJGL OpenAL
-[04:57:27] [Thread-4/INFO] (net.minecraft.client.sound.SoundSystem) (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[04:57:27] [Thread-4/INFO] (net.minecraft.client.sound.SoundSystem) OpenAL initialized.
-[04:57:28] [Sound Library Loader/INFO] (net.minecraft.client.sound.SoundSystem) Sound engine started
-[04:57:29] [main/INFO] (net.minecraft.client.texture.SpriteAtlasTexture) Created: 512x512 textures-atlas
-[04:57:29] [main/DEBUG] (FabricLoader/Mixin) Mixing access.GameRendererMixin from worldpreview.mixins.json into net.minecraft.client.render.GameRenderer
-[04:57:29] [main/DEBUG] (FabricLoader/Mixin) Mixing access.WorldRendererMixin from worldpreview.mixins.json into net.minecraft.client.render.WorldRenderer
-[04:57:29] [main/DEBUG] (FabricLoader/Mixin) Mixing client.render.WorldRendererMixin from worldpreview.mixins.json into net.minecraft.client.render.WorldRenderer
-[04:57:29] [main/DEBUG] (FabricLoader/Mixin) Mixing server.ServerPlayerEntityMixin from worldpreview.mixins.json into net.minecraft.entity.player.ServerPlayerEntity
-[04:57:29] [main/DEBUG] (FabricLoader/Mixin) Mixing RealmsBridgeMixin from worldpreview.mixins.json into net.minecraft.realms.RealmsBridge
-[04:57:29] [main/DEBUG] (FabricLoader/Mixin) Mixing client.render.LoadingScreenRendererMixin from worldpreview.mixins.json into net.minecraft.client.render.LoadingScreenRenderer
-[05:04:02] [Client Shutdown Thread/INFO] (net.minecraft.server.MinecraftServer) Stopping server
+	- minecraft 1.7.10
+	- worldpreview 1.0.5+1.7.10
+[18:08:40] [main/DEBUG] (FabricLoader/Mappings) Loading mappings took 39 ms
+[18:08:40] [main/DEBUG] (FabricLoader/Knot) Adding C:\Users\asadd\Desktop\WorldPreview\run\.fabric\processedMods\atum-1.1.3+1.7.10-64b5720b4b825f21.jar to classpath.
+[18:08:40] [main/DEBUG] (FabricLoader/Knot) Adding C:\Users\asadd\Desktop\WorldPreview\build\resources\main to classpath.
+[18:08:40] [main/DEBUG] (FabricLoader/Knot) Adding C:\Users\asadd\Desktop\WorldPreview\build\classes\java\main to classpath.
+[18:08:40] [main/DEBUG] (FabricLoader/Entrypoint) Registering new-style initializer me.voidxwalker.autoreset.Atum for mod atum (key main)
+[18:08:40] [main/DEBUG] (FabricLoader/Entrypoint) Registering new-style initializer me.voidxwalker.worldpreview.WorldPreview for mod worldpreview (key client)
+[18:08:40] [main/DEBUG] (FabricLoader/Mixin) Mixin bootstrap service org.spongepowered.asm.service.mojang.MixinServiceLaunchWrapperBootstrap is not available: LaunchWrapper is not available
+[18:08:40] [main/DEBUG] (FabricLoader/Mixin) Mixin bootstrap service org.spongepowered.asm.service.modlauncher.MixinServiceModLauncherBootstrap is not available: ModLauncher is not available
+[18:08:40] [main/DEBUG] (FabricLoader/Mixin) MixinService [Knot/Fabric] was successfully booted in jdk.internal.loader.ClassLoaders$AppClassLoader@1d44bcfa
+[18:08:40] [main/INFO] (FabricLoader/Mixin) SpongePowered MIXIN Subsystem Version=0.8.4 Source=file:/C:/Users/asadd/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.10.7+mixin.0.8.4/7a4ca9d54d9ae564dea0363d668036a8420ed9b8/sponge-mixin-0.10.7+mixin.0.8.4.jar Service=Knot/Fabric Env=CLIENT
+[18:08:40] [main/DEBUG] (FabricLoader/Mixin) Error cleaning class output directory: .mixin.out
+[18:08:40] [main/DEBUG] (FabricLoader/Mixin) Initialising Mixin Platform Manager
+[18:08:40] [main/DEBUG] (FabricLoader/Mixin) Adding mixin platform agents for container ContainerHandleURI(file:/C:/Users/asadd/Desktop/WorldPreview/.gradle/loom-cache/remapped_mods/net_legacyfabric_yarn_1_7_10_1_7_10_build_458_v2/net/fabricmc/fabric-loader/0.12.12/fabric-loader-0.12.12.jar)
+[18:08:40] [main/DEBUG] (FabricLoader/Mixin) Instancing new MixinPlatformAgentDefault for ContainerHandleURI(file:/C:/Users/asadd/Desktop/WorldPreview/.gradle/loom-cache/remapped_mods/net_legacyfabric_yarn_1_7_10_1_7_10_build_458_v2/net/fabricmc/fabric-loader/0.12.12/fabric-loader-0.12.12.jar)
+[18:08:40] [main/DEBUG] (FabricLoader/Mixin) MixinPlatformAgentDefault accepted container ContainerHandleURI(file:/C:/Users/asadd/Desktop/WorldPreview/.gradle/loom-cache/remapped_mods/net_legacyfabric_yarn_1_7_10_1_7_10_build_458_v2/net/fabricmc/fabric-loader/0.12.12/fabric-loader-0.12.12.jar)
+[18:08:40] [main/DEBUG] (FabricLoader/Mixin) Instancing new MixinPlatformAgentDefault for ContainerHandleURI(file:/C:/Users/asadd/Desktop/WorldPreview/.gradle/loom-cache/remapped_mods/net_legacyfabric_yarn_1_7_10_1_7_10_build_458_v2/net/fabricmc/fabric-loader/0.12.12/fabric-loader-0.12.12.jar)
+[18:08:40] [main/DEBUG] (FabricLoader/Mixin) MixinPlatformAgentDefault accepted container ContainerHandleURI(file:/C:/Users/asadd/Desktop/WorldPreview/.gradle/loom-cache/remapped_mods/net_legacyfabric_yarn_1_7_10_1_7_10_build_458_v2/net/fabricmc/fabric-loader/0.12.12/fabric-loader-0.12.12.jar)
+[18:08:40] [main/DEBUG] (FabricLoader/Mixin) Processing prepare() for PlatformAgent[MixinPlatformAgentDefault:ContainerHandleURI(file:/C:/Users/asadd/Desktop/WorldPreview/.gradle/loom-cache/remapped_mods/net_legacyfabric_yarn_1_7_10_1_7_10_build_458_v2/net/fabricmc/fabric-loader/0.12.12/fabric-loader-0.12.12.jar)]
+[18:08:40] [main/DEBUG] (FabricLoader/Mixin) Processing prepare() for PlatformAgent[MixinPlatformAgentDefault:ContainerHandleURI(file:/C:/Users/asadd/Desktop/WorldPreview/.gradle/loom-cache/remapped_mods/net_legacyfabric_yarn_1_7_10_1_7_10_build_458_v2/net/fabricmc/fabric-loader/0.12.12/fabric-loader-0.12.12.jar)]
+[18:08:40] [main/INFO] (FabricLoader/Mixin) Loaded Fabric development mappings for mixin remapper!
+[18:08:40] [main/DEBUG] (FabricLoader/Knot) Adding C:\Users\asadd\.gradle\caches\fabric-loom\1.7.10\net.legacyfabric.yarn.1_7_10.1.7.10+build.458-v2\minecraft-merged-named.jar to classpath.
+[18:08:40] [main/DEBUG] (FabricLoader/Entrypoint) No subscribers for entrypoint 'preLaunch'
+[18:08:40] [main/DEBUG] (FabricLoader/Mixin) Preparing mixins for MixinEnvironment[DEFAULT]
+[18:08:40] [main/DEBUG] (FabricLoader/Mixin) Selecting config autoreset.mixins.json
+[18:08:40] [main/DEBUG] (FabricLoader/Mixin) Remapping refMap atum-refmap.json using remapper chain
+[18:08:40] [main/DEBUG] (FabricLoader/Mixin) Selecting config worldpreview.mixins.json
+[18:08:40] [main/DEBUG] (FabricLoader/Mixin) Preparing autoreset.mixins.json (13)
+[18:08:40] [main/DEBUG] (FabricLoader/Mixin) Preparing worldpreview.mixins.json (12)
+[18:08:40] [main/DEBUG] (FabricLoader/Mixin) Registering new injector for @Inject with org.spongepowered.asm.mixin.injection.struct.CallbackInjectionInfo
+[18:08:40] [main/DEBUG] (FabricLoader/Mixin) Registering new injector for @ModifyArg with org.spongepowered.asm.mixin.injection.struct.ModifyArgInjectionInfo
+[18:08:40] [main/DEBUG] (FabricLoader/Mixin) Registering new injector for @ModifyArgs with org.spongepowered.asm.mixin.injection.struct.ModifyArgsInjectionInfo
+[18:08:40] [main/DEBUG] (FabricLoader/Mixin) Registering new injector for @Redirect with org.spongepowered.asm.mixin.injection.struct.RedirectInjectionInfo
+[18:08:40] [main/DEBUG] (FabricLoader/Mixin) Registering new injector for @ModifyVariable with org.spongepowered.asm.mixin.injection.struct.ModifyVariableInjectionInfo
+[18:08:40] [main/DEBUG] (FabricLoader/Mixin) Registering new injector for @ModifyConstant with org.spongepowered.asm.mixin.injection.struct.ModifyConstantInjectionInfo
+[18:08:40] [main/DEBUG] (FabricLoader/Mixin) Mixing hotkey.KeyboardMixin from autoreset.mixins.json into net.minecraft.client.MinecraftClient
+[18:08:40] [main/DEBUG] (FabricLoader/Mixin) Mixing hotkey.MinecraftClientMixin from autoreset.mixins.json into net.minecraft.client.MinecraftClient
+[18:08:40] [main/DEBUG] (FabricLoader/Mixin) Mixing access.MinecraftClientMixin from worldpreview.mixins.json into net.minecraft.client.MinecraftClient
+[18:08:40] [main/DEBUG] (FabricLoader/Mixin) Mixing client.MinecraftClientMixin from worldpreview.mixins.json into net.minecraft.client.MinecraftClient
+[18:08:40] [main/DEBUG] (FabricLoader/Mixin) autoreset.mixins.json:hotkey.KeyboardMixin->@Inject::atum_onKey(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod atum doesn't use it's CallbackInfo
+[18:08:40] [main/DEBUG] (FabricLoader/Mixin) autoreset.mixins.json:hotkey.KeyboardMixin->@Inject::atum_onKey(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod atum has 0 override(s) in child classes
+[18:08:40] [main/DEBUG] (FabricLoader/Mixin) autoreset.mixins.json:hotkey.KeyboardMixin->@Inject::atum_onKey(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod atum won't be passed a CallbackInfo as a result
+[18:08:40] [main/DEBUG] (FabricLoader/Mixin) autoreset.mixins.json:hotkey.MinecraftClientMixin->@Inject::atum_trackPostWorldGen(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod atum doesn't use it's CallbackInfo
+[18:08:40] [main/DEBUG] (FabricLoader/Mixin) autoreset.mixins.json:hotkey.MinecraftClientMixin->@Inject::atum_trackPostWorldGen(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod atum has 0 override(s) in child classes
+[18:08:40] [main/DEBUG] (FabricLoader/Mixin) autoreset.mixins.json:hotkey.MinecraftClientMixin->@Inject::atum_trackPostWorldGen(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod atum won't be passed a CallbackInfo as a result
+[18:08:40] [main/DEBUG] (FabricLoader/Mixin) autoreset.mixins.json:hotkey.MinecraftClientMixin->@Inject::atum_trackPreWorldGen(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod atum doesn't use it's CallbackInfo
+[18:08:40] [main/DEBUG] (FabricLoader/Mixin) autoreset.mixins.json:hotkey.MinecraftClientMixin->@Inject::atum_trackPreWorldGen(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod atum has 0 override(s) in child classes
+[18:08:40] [main/DEBUG] (FabricLoader/Mixin) autoreset.mixins.json:hotkey.MinecraftClientMixin->@Inject::atum_trackPreWorldGen(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod atum won't be passed a CallbackInfo as a result
+[18:08:40] [main/DEBUG] (FabricLoader/Mixin) autoreset.mixins.json:hotkey.MinecraftClientMixin->@Inject::atum_tick(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod atum does use it's CallbackInfo
+[18:08:40] [main/DEBUG] (FabricLoader/Mixin) autoreset.mixins.json:hotkey.MinecraftClientMixin->@Inject::atum_tickDuringWorldGen(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod atum doesn't use it's CallbackInfo
+[18:08:40] [main/DEBUG] (FabricLoader/Mixin) autoreset.mixins.json:hotkey.MinecraftClientMixin->@Inject::atum_tickDuringWorldGen(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod atum has 0 override(s) in child classes
+[18:08:40] [main/DEBUG] (FabricLoader/Mixin) autoreset.mixins.json:hotkey.MinecraftClientMixin->@Inject::atum_tickDuringWorldGen(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod atum won't be passed a CallbackInfo as a result
+[18:08:40] [main/DEBUG] (FabricLoader/Mixin) worldpreview.mixins.json:client.MinecraftClientMixin->@Inject::worldpreview_onHotKeyPressed(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod worldpreview does use it's CallbackInfo
+[18:08:40] [main/DEBUG] (FabricLoader/Mixin) worldpreview.mixins.json:client.MinecraftClientMixin->@Inject::isExistingWorld(Ljava/lang/String;Ljava/lang/String;Lnet/minecraft/world/level/LevelInfo;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod worldpreview doesn't use it's CallbackInfo
+[18:08:40] [main/DEBUG] (FabricLoader/Mixin) worldpreview.mixins.json:client.MinecraftClientMixin->@Inject::isExistingWorld(Ljava/lang/String;Ljava/lang/String;Lnet/minecraft/world/level/LevelInfo;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod worldpreview has 0 override(s) in child classes
+[18:08:40] [main/DEBUG] (FabricLoader/Mixin) worldpreview.mixins.json:client.MinecraftClientMixin->@Inject::isExistingWorld(Ljava/lang/String;Ljava/lang/String;Lnet/minecraft/world/level/LevelInfo;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod worldpreview won't be passed a CallbackInfo as a result
+[18:08:40] [main/DEBUG] (FabricLoader/Mixin) worldpreview.mixins.json:client.MinecraftClientMixin->@Inject::reset(Lnet/minecraft/client/world/ClientWorld;Ljava/lang/String;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod worldpreview doesn't use it's CallbackInfo
+[18:08:40] [main/DEBUG] (FabricLoader/Mixin) worldpreview.mixins.json:client.MinecraftClientMixin->@Inject::reset(Lnet/minecraft/client/world/ClientWorld;Ljava/lang/String;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod worldpreview has 0 override(s) in child classes
+[18:08:40] [main/DEBUG] (FabricLoader/Mixin) worldpreview.mixins.json:client.MinecraftClientMixin->@Inject::reset(Lnet/minecraft/client/world/ClientWorld;Ljava/lang/String;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod worldpreview won't be passed a CallbackInfo as a result
+[18:08:40] [main/DEBUG] (FabricLoader/Mixin) Mixing hotkey.ScreenAccessor from autoreset.mixins.json into net.minecraft.client.gui.screen.Screen
+[18:08:40] [main/DEBUG] (FabricLoader/Mixin) Mixing client.GameMenuScreenMixin from worldpreview.mixins.json into net.minecraft.client.gui.screen.GameMenuScreen
+[18:08:40] [main/DEBUG] (FabricLoader/Mixin) worldpreview.mixins.json:client.GameMenuScreenMixin->@Inject::cancelIfWorldNull(Lnet/minecraft/client/gui/widget/ButtonWidget;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod worldpreview does use it's CallbackInfo
+[18:08:40] [main/DEBUG] (FabricLoader/Mixin) Mixing TitleScreenMixin from autoreset.mixins.json into net.minecraft.client.gui.screen.TitleScreen
+[18:08:40] [main/DEBUG] (FabricLoader/Mixin) autoreset.mixins.json:TitleScreenMixin->@Inject::init(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod atum doesn't use it's CallbackInfo
+[18:08:40] [main/DEBUG] (FabricLoader/Mixin) autoreset.mixins.json:TitleScreenMixin->@Inject::init(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod atum has 0 override(s) in child classes
+[18:08:40] [main/DEBUG] (FabricLoader/Mixin) autoreset.mixins.json:TitleScreenMixin->@Inject::init(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod atum won't be passed a CallbackInfo as a result
+[18:08:40] [main/DEBUG] (FabricLoader/Mixin) autoreset.mixins.json:TitleScreenMixin->@Inject::goldBootsOverlay(IIFLorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod atum doesn't use it's CallbackInfo
+[18:08:40] [main/DEBUG] (FabricLoader/Mixin) autoreset.mixins.json:TitleScreenMixin->@Inject::goldBootsOverlay(IIFLorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod atum has 0 override(s) in child classes
+[18:08:40] [main/DEBUG] (FabricLoader/Mixin) autoreset.mixins.json:TitleScreenMixin->@Inject::goldBootsOverlay(IIFLorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod atum won't be passed a CallbackInfo as a result
+[18:08:40] [main/DEBUG] (FabricLoader/Mixin) autoreset.mixins.json:TitleScreenMixin->@Inject::buttonClicked(Lnet/minecraft/client/gui/widget/ButtonWidget;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod atum does use it's CallbackInfo
+[18:08:41] [main/DEBUG] (FabricLoader/Mixin) Mixing hotkey.MinecraftServerMixin from autoreset.mixins.json into net.minecraft.server.MinecraftServer
+[18:08:41] [main/DEBUG] (FabricLoader/Mixin) Mixing server.MinecraftServerMixin from worldpreview.mixins.json into net.minecraft.server.MinecraftServer
+[18:08:41] [main/DEBUG] (FabricLoader/Mixin) autoreset.mixins.json:hotkey.MinecraftServerMixin->@Inject::trackWorldGenStart(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod atum doesn't use it's CallbackInfo
+[18:08:41] [main/DEBUG] (FabricLoader/Mixin) autoreset.mixins.json:hotkey.MinecraftServerMixin->@Inject::trackWorldGenStart(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod atum has 0 override(s) in child classes
+[18:08:41] [main/DEBUG] (FabricLoader/Mixin) autoreset.mixins.json:hotkey.MinecraftServerMixin->@Inject::trackWorldGenStart(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod atum won't be passed a CallbackInfo as a result
+[18:08:41] [main/DEBUG] (FabricLoader/Mixin) worldpreview.mixins.json:server.MinecraftServerMixin->@Inject::worldpreview_getWorld(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod worldpreview doesn't use it's CallbackInfo
+[18:08:41] [main/DEBUG] (FabricLoader/Mixin) worldpreview.mixins.json:server.MinecraftServerMixin->@Inject::worldpreview_getWorld(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod worldpreview has 0 override(s) in child classes
+[18:08:41] [main/DEBUG] (FabricLoader/Mixin) worldpreview.mixins.json:server.MinecraftServerMixin->@Inject::worldpreview_getWorld(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod worldpreview won't be passed a CallbackInfo as a result
+[18:08:41] [main/DEBUG] (FabricLoader/Mixin) worldpreview.mixins.json:server.MinecraftServerMixin->@Inject::kill(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod worldpreview does use it's CallbackInfo
+[18:08:41] [main/DEBUG] (FabricLoader/Mixin) worldpreview.mixins.json:server.MinecraftServerMixin->@Inject::kill2(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod worldpreview does use it's CallbackInfo
+[18:08:41] [main/DEBUG] (FabricLoader/Mixin) worldpreview.mixins.json:server.MinecraftServerMixin->@Inject::kill2(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod worldpreview does use it's CallbackInfo
+[18:08:41] [main/DEBUG] (FabricLoader/Mixin) worldpreview.mixins.json:server.MinecraftServerMixin->@Inject::kill3(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod worldpreview does use it's CallbackInfo
+[18:08:41] [main/DEBUG] (FabricLoader/Mixin) worldpreview.mixins.json:server.MinecraftServerMixin->@Inject::kill4(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod worldpreview does use it's CallbackInfo
+[18:08:41] [main/INFO] (net.minecraft.client.MinecraftClient) Setting user: Player255
+[18:08:41] [main/INFO] (net.minecraft.client.MinecraftClient) (Session ID is token:FabricMC:Player255)
+[18:08:41] [main/DEBUG] (FabricLoader/Mixin) Mixing hotkey.GameOptionsMixin from autoreset.mixins.json into net.minecraft.client.option.GameOptions
+[18:08:41] [main/DEBUG] (FabricLoader/Mixin) Mixing client.GameOptionsMixin from worldpreview.mixins.json into net.minecraft.client.option.GameOptions
+[18:08:41] [main/DEBUG] (FabricLoader/Mixin) autoreset.mixins.json:hotkey.GameOptionsMixin->@Inject::loadHook(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod atum doesn't use it's CallbackInfo
+[18:08:41] [main/DEBUG] (FabricLoader/Mixin) autoreset.mixins.json:hotkey.GameOptionsMixin->@Inject::loadHook(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod atum has 0 override(s) in child classes
+[18:08:41] [main/DEBUG] (FabricLoader/Mixin) autoreset.mixins.json:hotkey.GameOptionsMixin->@Inject::loadHook(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod atum won't be passed a CallbackInfo as a result
+[18:08:41] [main/DEBUG] (FabricLoader/Mixin) worldpreview.mixins.json:client.GameOptionsMixin->@Inject::initInject(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod worldpreview doesn't use it's CallbackInfo
+[18:08:41] [main/DEBUG] (FabricLoader/Mixin) worldpreview.mixins.json:client.GameOptionsMixin->@Inject::initInject(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod worldpreview has 0 override(s) in child classes
+[18:08:41] [main/DEBUG] (FabricLoader/Mixin) worldpreview.mixins.json:client.GameOptionsMixin->@Inject::initInject(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod worldpreview won't be passed a CallbackInfo as a result
+[18:08:41] [main/DEBUG] (FabricLoader/Mixin) Mixing hotkey.KeyBindingAccessor from autoreset.mixins.json into net.minecraft.client.option.KeyBinding
+[18:08:41] [main/DEBUG] (FabricLoader/Mixin) Renaming @Accessor method invokeGetCategoryMap()Ljava/util/Set; to invokeGetCategoryMap_$md$20ff22$0 in autoreset.mixins.json:hotkey.KeyBindingAccessor
+[18:08:41] [main/DEBUG] (FabricLoader/Entrypoint) Iterating over entrypoint 'main'
+[18:08:41] [main/DEBUG] (FabricLoader/Mixin) Mixing LoadingScreenRendererMixin from autoreset.mixins.json into net.minecraft.client.gui.screen.ProgressScreen
+[18:08:41] [main/DEBUG] (FabricLoader/Mixin) autoreset.mixins.json:LoadingScreenRendererMixin->@Inject::modifyString(IIFLorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod atum doesn't use it's CallbackInfo
+[18:08:41] [main/DEBUG] (FabricLoader/Mixin) autoreset.mixins.json:LoadingScreenRendererMixin->@Inject::modifyString(IIFLorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod atum has 0 override(s) in child classes
+[18:08:41] [main/DEBUG] (FabricLoader/Mixin) autoreset.mixins.json:LoadingScreenRendererMixin->@Inject::modifyString(IIFLorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod atum won't be passed a CallbackInfo as a result
+[18:08:41] [main/DEBUG] (FabricLoader/Mixin) Mixing DebugHudMixin from autoreset.mixins.json into net.minecraft.client.gui.hud.InGameHud
+[18:08:41] [main/DEBUG] (FabricLoader/Mixin) autoreset.mixins.json:DebugHudMixin->@Inject::getRightText(FZIILorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod atum doesn't use it's CallbackInfo
+[18:08:41] [main/DEBUG] (FabricLoader/Mixin) autoreset.mixins.json:DebugHudMixin->@Inject::getRightText(FZIILorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod atum has 0 override(s) in child classes
+[18:08:41] [main/DEBUG] (FabricLoader/Mixin) autoreset.mixins.json:DebugHudMixin->@Inject::getRightText(FZIILorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod atum won't be passed a CallbackInfo as a result
+[18:08:41] [main/INFO] (me.voidxwalker.autoreset.Atum) Initializing
+[18:08:41] [main/DEBUG] (FabricLoader/Entrypoint) Iterating over entrypoint 'client'
+[18:08:41] [main/INFO] (me.voidxwalker.worldpreview.WorldPreview) Found worldpreview.properties file in .minecraft/config. Reading it in.
+[18:08:41] [main/INFO] (net.minecraft.client.MinecraftClient) LWJGL Version: 2.9.1
+[18:08:41] [main/ERROR] (net.minecraft.client.MinecraftClient) Couldn't initialize twitch stream
+[18:08:41] [main/INFO] (net.minecraft.resource.ReloadableResourceManagerImpl) Reloading ResourceManager: Default
+[18:08:42] [main/DEBUG] (FabricLoader/Mixin) Mixing access.WorldRendererMixin from worldpreview.mixins.json into net.minecraft.client.render.WorldRenderer
+[18:08:42] [main/DEBUG] (FabricLoader/Mixin) Mixing client.render.WorldRendererMixin from worldpreview.mixins.json into net.minecraft.client.render.WorldRenderer
+[18:08:42] [Sound Library Loader/INFO] (net.minecraft.client.sound.SoundSystem) Sound engine started
+[18:08:42] [main/INFO] (net.minecraft.client.texture.SpriteAtlasTexture) Created: 512x256 textures/blocks-atlas
+[18:08:42] [main/INFO] (net.minecraft.client.texture.SpriteAtlasTexture) Created: 256x256 textures/items-atlas
+[18:08:42] [main/DEBUG] (FabricLoader/Mixin) Mixing SettingsScreenMixin from autoreset.mixins.json into net.minecraft.client.gui.screen.SettingsScreen
+[18:08:42] [main/DEBUG] (FabricLoader/Mixin) autoreset.mixins.json:SettingsScreenMixin->@Inject::addAutoResetButton(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod atum doesn't use it's CallbackInfo
+[18:08:42] [main/DEBUG] (FabricLoader/Mixin) autoreset.mixins.json:SettingsScreenMixin->@Inject::addAutoResetButton(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod atum has 0 override(s) in child classes
+[18:08:42] [main/DEBUG] (FabricLoader/Mixin) autoreset.mixins.json:SettingsScreenMixin->@Inject::addAutoResetButton(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod atum won't be passed a CallbackInfo as a result
+[18:08:42] [main/DEBUG] (FabricLoader/Mixin) autoreset.mixins.json:SettingsScreenMixin->@Inject::buttonClicked(Lnet/minecraft/client/gui/widget/ButtonWidget;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod atum doesn't use it's CallbackInfo
+[18:08:42] [main/DEBUG] (FabricLoader/Mixin) autoreset.mixins.json:SettingsScreenMixin->@Inject::buttonClicked(Lnet/minecraft/client/gui/widget/ButtonWidget;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod atum has 0 override(s) in child classes
+[18:08:42] [main/DEBUG] (FabricLoader/Mixin) autoreset.mixins.json:SettingsScreenMixin->@Inject::buttonClicked(Lnet/minecraft/client/gui/widget/ButtonWidget;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod atum won't be passed a CallbackInfo as a result
+[18:08:42] [main/DEBUG] (FabricLoader/Mixin) Mixing CreateWorldScreenMixin from autoreset.mixins.json into net.minecraft.client.gui.screen.world.CreateWorldScreen
+[18:08:42] [main/DEBUG] (FabricLoader/Mixin) autoreset.mixins.json:CreateWorldScreenMixin->@Inject::createDesiredWorld(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod atum doesn't use it's CallbackInfo
+[18:08:42] [main/DEBUG] (FabricLoader/Mixin) autoreset.mixins.json:CreateWorldScreenMixin->@Inject::createDesiredWorld(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod atum has 0 override(s) in child classes
+[18:08:42] [main/DEBUG] (FabricLoader/Mixin) autoreset.mixins.json:CreateWorldScreenMixin->@Inject::createDesiredWorld(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod atum won't be passed a CallbackInfo as a result
+[18:08:42] [main/DEBUG] (FabricLoader/Mixin) Mixing client.render.LoadingScreenRendererMixin from worldpreview.mixins.json into net.minecraft.client.render.LoadingScreenRenderer
+[18:08:42] [main/DEBUG] (FabricLoader/Mixin) Mixing client.render.BufferBuilderMixin from worldpreview.mixins.json into net.minecraft.client.render.BufferBuilder
+[18:08:44] [main/DEBUG] (FabricLoader/Mixin) Mixing ServerPlayerEntityMixin from autoreset.mixins.json into net.minecraft.entity.player.ServerPlayerEntity
+[18:08:44] [main/DEBUG] (FabricLoader/Mixin) Mixing server.ServerPlayerEntityMixin from worldpreview.mixins.json into net.minecraft.entity.player.ServerPlayerEntity
+[18:08:44] [main/DEBUG] (FabricLoader/Mixin) autoreset.mixins.json:ServerPlayerEntityMixin->@Inject::preventLoop(Lnet/minecraft/server/MinecraftServer;Lnet/minecraft/server/world/ServerWorld;Lcom/mojang/authlib/GameProfile;Lnet/minecraft/server/network/ServerPlayerInteractionManager;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod atum doesn't use it's CallbackInfo
+[18:08:44] [main/DEBUG] (FabricLoader/Mixin) autoreset.mixins.json:ServerPlayerEntityMixin->@Inject::preventLoop(Lnet/minecraft/server/MinecraftServer;Lnet/minecraft/server/world/ServerWorld;Lcom/mojang/authlib/GameProfile;Lnet/minecraft/server/network/ServerPlayerInteractionManager;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod atum has 0 override(s) in child classes
+[18:08:44] [main/DEBUG] (FabricLoader/Mixin) autoreset.mixins.json:ServerPlayerEntityMixin->@Inject::preventLoop(Lnet/minecraft/server/MinecraftServer;Lnet/minecraft/server/world/ServerWorld;Lcom/mojang/authlib/GameProfile;Lnet/minecraft/server/network/ServerPlayerInteractionManager;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod atum won't be passed a CallbackInfo as a result
+[18:08:44] [Server thread/INFO] (net.minecraft.server.integrated.IntegratedServer) Starting integrated minecraft server version 1.7.10
+[18:08:44] [Server thread/INFO] (net.minecraft.server.integrated.IntegratedServer) Generating keypair
+[18:08:44] [Server thread/INFO] (net.minecraft.server.MinecraftServer) Converting map!
+[18:08:44] [Server thread/INFO] (net.minecraft.world.level.storage.AnvilLevelStorage) Scanning folders...
+[18:08:44] [Server thread/INFO] (net.minecraft.world.level.storage.AnvilLevelStorage) Total conversion count is 0
+[18:08:44] [Server thread/DEBUG] (FabricLoader/Mixin) Mixing access.ServerChunkProviderMixin from worldpreview.mixins.json into net.minecraft.world.chunk.ServerChunkProvider
+[18:08:44] [Server thread/DEBUG] (FabricLoader/Mixin) Mixing hotkey.ClientPlayerNetworkHandlerMixin from autoreset.mixins.json into net.minecraft.client.network.ClientPlayNetworkHandler
+[18:08:44] [Server thread/DEBUG] (FabricLoader/Mixin) autoreset.mixins.json:hotkey.ClientPlayerNetworkHandlerMixin->@Inject::atum_trackInGame(Lnet/minecraft/network/packet/s2c/play/PlayerPositionLookS2CPacket;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod atum doesn't use it's CallbackInfo
+[18:08:44] [Server thread/DEBUG] (FabricLoader/Mixin) autoreset.mixins.json:hotkey.ClientPlayerNetworkHandlerMixin->@Inject::atum_trackInGame(Lnet/minecraft/network/packet/s2c/play/PlayerPositionLookS2CPacket;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod atum has 0 override(s) in child classes
+[18:08:44] [Server thread/DEBUG] (FabricLoader/Mixin) autoreset.mixins.json:hotkey.ClientPlayerNetworkHandlerMixin->@Inject::atum_trackInGame(Lnet/minecraft/network/packet/s2c/play/PlayerPositionLookS2CPacket;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V from mod atum won't be passed a CallbackInfo as a result
+[18:08:44] [Server thread/DEBUG] (FabricLoader/Mixin) Mixing access.ClientChunkProviderMixin from worldpreview.mixins.json into net.minecraft.world.chunk.ClientChunkProvider
+[18:08:44] [Server thread/INFO] (net.minecraft.server.MinecraftServer) Preparing start region for level 0
+[18:08:44] [Server thread/INFO] (net.minecraft.server.MinecraftServer) Preparing spawn area: 2%
+[18:08:44] [Server thread/INFO] (net.minecraft.server.MinecraftServer) Preparing spawn area: 4%
+[18:08:44] [Server thread/INFO] (net.minecraft.server.MinecraftServer) Preparing spawn area: 7%
+[18:08:44] [Server thread/INFO] (net.minecraft.server.MinecraftServer) Preparing spawn area: 11%
+[18:08:44] [Server thread/INFO] (net.minecraft.server.MinecraftServer) Preparing spawn area: 14%
+[18:08:45] [Server thread/INFO] (net.minecraft.server.MinecraftServer) Preparing spawn area: 19%
+[18:08:45] [Server thread/INFO] (net.minecraft.server.MinecraftServer) Preparing spawn area: 23%
+[18:08:45] [Server thread/INFO] (net.minecraft.server.MinecraftServer) Preparing spawn area: 28%
+[18:08:45] [Server thread/INFO] (net.minecraft.server.MinecraftServer) Preparing spawn area: 34%
+[18:08:45] [Server thread/INFO] (net.minecraft.server.MinecraftServer) Preparing spawn area: 40%
+[18:08:45] [Server thread/INFO] (net.minecraft.server.MinecraftServer) Preparing spawn area: 45%
+[18:08:45] [Server thread/INFO] (net.minecraft.server.MinecraftServer) Preparing spawn area: 50%
+[18:08:45] [Server thread/INFO] (net.minecraft.server.MinecraftServer) Preparing spawn area: 55%
+[18:08:45] [main/INFO] (me.voidxwalker.worldpreview.WorldPreview) Starting preview.
+[18:08:45] [Server thread/INFO] (net.minecraft.server.MinecraftServer) Preparing spawn area: 60%
+[18:08:45] [Server thread/INFO] (net.minecraft.server.MinecraftServer) Preparing spawn area: 64%
+[18:08:46] [Server thread/INFO] (me.voidxwalker.worldpreview.WorldPreview) Preview at 70%, freezing automatically.
+[18:08:46] [Server thread/INFO] (net.minecraft.server.MinecraftServer) Preparing spawn area: 70%
+[18:08:46] [Server thread/INFO] (net.minecraft.server.MinecraftServer) Preparing spawn area: 77%
+[18:08:46] [Server thread/INFO] (net.minecraft.server.MinecraftServer) Preparing spawn area: 83%
+[18:08:46] [Server thread/INFO] (net.minecraft.server.MinecraftServer) Preparing spawn area: 86%
+[18:08:46] [Server thread/INFO] (net.minecraft.server.MinecraftServer) Preparing spawn area: 92%
+[18:08:46] [Server thread/INFO] (net.minecraft.server.MinecraftServer) Preparing spawn area: 97%
+[18:08:46] [Server thread/INFO] (net.minecraft.server.integrated.IntegratedServer) Changing view distance to 9, from 10
+[18:08:47] [Server thread/INFO] (net.minecraft.server.PlayerManager) Player255[local:E:226f1775] logged in with entity id 141 at (-133.5, 67.0, -246.5)
+[18:08:47] [Server thread/INFO] (net.minecraft.server.MinecraftServer) Player255 joined the game
+[18:08:51] [Client Shutdown Thread/INFO] (net.minecraft.server.MinecraftServer) Stopping server

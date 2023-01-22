@@ -1,8 +1,8 @@
 package me.voidxwalker.worldpreview.mixin.client;
 
 import me.voidxwalker.worldpreview.WorldPreview;
-import net.minecraft.client.options.GameOptions;
-import net.minecraft.client.options.KeyBinding;
+import net.minecraft.client.option.GameOptions;
+import net.minecraft.client.option.KeyBinding;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
@@ -14,18 +14,18 @@ import java.util.Arrays;
 
 @Mixin(GameOptions.class)
 public class GameOptionsMixin {
-    @Shadow public KeyBinding[] keysAll;
+    @Shadow public KeyBinding[] allKeys;
     private KeyBinding freezePreviewKey;
     private KeyBinding leavePreviewKey;
 
-    @Inject(method = "<init>(Lnet/minecraft/client/MinecraftClient;Ljava/io/File;)V", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/options/GameOptions;load()V"))
+    @Inject(method = "<init>(Lnet/minecraft/client/MinecraftClient;Ljava/io/File;)V", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/option/GameOptions;load()V"))
     private void initInject(CallbackInfo ci) {
         this.freezePreviewKey = new KeyBinding("Freeze Preview", 36, "World Preview");
         this.leavePreviewKey = new KeyBinding("Leave Preview", 37, "World Preview");
-        ArrayList<KeyBinding> a = new ArrayList<>(Arrays.asList(this.keysAll));
+        ArrayList<KeyBinding> a = new ArrayList<>(Arrays.asList(this.allKeys));
         a.add(this.freezePreviewKey);
         a.add(this.leavePreviewKey);
-        this.keysAll = a.toArray(this.keysAll);
+        this.allKeys = a.toArray(this.allKeys);
         WorldPreview.freezeKey = this.freezePreviewKey;
         WorldPreview.resetKey = this.leavePreviewKey;
     }

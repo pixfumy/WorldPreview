@@ -17,7 +17,7 @@ public class GameMenuScreenMixin {
      * This causes the game to pause, and a click input can occur on the save and quit button before the client's world
      * is initialized. This causes a crash.
      */
-    @Inject(method = "buttonClicked", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/MinecraftClient;isIntegratedServerRunning()Z", shift = At.Shift.BEFORE),
+    @Inject(method = "buttonClicked", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/world/ClientWorld;disconnect()V", shift = At.Shift.BEFORE),
             cancellable = true)
     private void cancelIfWorldNull(ButtonWidget button, CallbackInfo ci) {
         if (MinecraftClient.getInstance().world == null) {

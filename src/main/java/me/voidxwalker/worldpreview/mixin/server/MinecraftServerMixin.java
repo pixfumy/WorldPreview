@@ -7,6 +7,7 @@ import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.network.ClientPlayNetworkHandler;
 import net.minecraft.client.world.ClientWorld;
 import net.minecraft.entity.player.ClientPlayerEntity;
+import net.minecraft.entity.player.ControllablePlayerEntity;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.PlayerManager;
 import net.minecraft.server.ServerNetworkIo;
@@ -18,6 +19,7 @@ import net.minecraft.util.math.ChunkPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.snooper.Snooper;
 import net.minecraft.world.Difficulty;
+import net.minecraft.world.GameMode;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.ServerChunkProvider;
@@ -54,30 +56,30 @@ public abstract class MinecraftServerMixin {//  extends ReentrantThreadExecutor<
 
     @Shadow @Final private Snooper snooper;
 
-    @Shadow private Thread serverThread;
-
     @Shadow public abstract World getWorld();
 
     @Shadow protected abstract void logProgress(String progressType, int worldProgress);
+
+    @Shadow @Final private Random random;
 
     @Redirect(method = "prepareWorlds",at = @At(value = "INVOKE",target = "Lnet/minecraft/world/chunk/ServerChunkProvider;getOrGenerateChunk(II)Lnet/minecraft/world/chunk/Chunk;"))
     public Chunk getChunks(ServerChunkProvider instance, int x, int z){
         Chunk ret = instance.getOrGenerateChunk(x,z);
         synchronized (WorldPreview.lock){
-            if(WorldPreview.player!=null && !WorldPreview.freezePreview && WorldPreview.inPreview){
-                LongObjectStorage<Chunk> chunkStorage=((ClientChunkProviderMixin) WorldPreview.clientWorld.getChunkProvider()).getChunkStorage();
+            if(WorldPreview.player!=null && !WorldPreview.freezePreview){
+                LongObjectStorage chunkStorage=((ClientChunkProviderMixin) WorldPreview.clientWorld.getChunkProvider()).getChunkStorage();
                 List<Chunk> chunks=((ClientChunkProviderMixin) WorldPreview.clientWorld.getChunkProvider()).getChunks();
                 Iterator<Chunk> iterator =  ((ServerChunkProviderMixin)instance).getChunks().iterator();
                 BlockPos spawnPos = WorldPreview.spawnPos;
-                int spawnChunkX = spawnPos.getX() >> 4;
-                int spawnChunkZ = spawnPos.getZ() >> 4;
+                int spawnChunkX = spawnPos.x >> 4;
+                int spawnChunkZ = spawnPos.z >> 4;
                 while (iterator.hasNext()){
                     Chunk chunk = iterator.next();
                     long id = ChunkPos.getIdFromCoords(chunk.chunkX, chunk.chunkZ);
-                    if(chunkStorage.get(id)==null && chunk.isTerrainPopulated()){
+                    if(chunkStorage.get(id)==null && chunk.terrainPopulated){
                         chunkStorage.set(ChunkPos.getIdFromCoords(chunk.chunkX, chunk.chunkZ), chunk);
                         chunks.add(chunk);
-                        chunk.setChunkLoaded(true);
+                        chunk.loaded = true;
                         if (spawnChunkX + 1 == chunk.chunkX && spawnChunkZ == chunk.chunkZ && !WorldPreview.loadedSpawn) {
                             worldpreview_calculateSpawn((ServerWorld) getWorld());
                             WorldPreview.loadedSpawn = true;
@@ -94,36 +96,30 @@ public abstract class MinecraftServerMixin {//  extends ReentrantThreadExecutor<
         synchronized (WorldPreview.lock){
             if(!WorldPreview.existingWorld){
                 ServerWorld serverWorld = this.getWorld(0);
-                WorldPreview.spawnPos= serverWorld.getSpawnPos();
+                WorldPreview.spawnPos= serverWorld.getWorldSpawnPos();
                 WorldPreview.freezePreview=false;
                 WorldPreview.world= this.getWorld(0);
-                LevelInfo properties = new LevelInfo(WorldPreview.world.getLevelProperties().getSeed(), LevelInfo.GameMode.SURVIVAL, false, WorldPreview.world.getLevelProperties().isHardcore(), WorldPreview.world.getLevelProperties().getGeneratorType());
-                WorldPreview.clientWorld = new ClientWorld(null, properties, 0, Difficulty.NORMAL , MinecraftClient.getInstance().profiler);
-                ClientPlayNetworkHandler networkHandler = new ClientPlayNetworkHandler(MinecraftClient.getInstance(), null, null, MinecraftClient.getInstance().getSession().getProfile());
-                WorldPreview.player = new ClientPlayerEntity(MinecraftClient.getInstance(), WorldPreview.clientWorld, networkHandler,null);
+                LevelInfo properties = new LevelInfo(WorldPreview.world.getLevelProperties().getSeed(), GameMode.SURVIVAL, false, WorldPreview.world.getLevelProperties().isHardcore(), WorldPreview.world.getLevelProperties().getGeneratorType());
+                ClientPlayNetworkHandler networkHandler = new ClientPlayNetworkHandler(MinecraftClient.getInstance(), null, null);
+                WorldPreview.clientWorld = new ClientWorld(networkHandler, properties, 0, Difficulty.NORMAL , MinecraftClient.getInstance().profiler);
+                WorldPreview.player = new ControllablePlayerEntity(MinecraftClient.getInstance(), WorldPreview.clientWorld, MinecraftClient.getInstance().getSession(), networkHandler, null);
             }
         }
     }
 
-    private void worldpreview_calculateSpawn(ServerWorld serverWorld) {
+    private void worldpreview_calculateSpawn(ServerWorld world) {
         BlockPos blockPos = WorldPreview.spawnPos;
-        if (!serverWorld.dimension.isNether() && serverWorld.getLevelProperties().getGameMode() != LevelInfo.GameMode.ADVENTURE) {
+        Random random = new Random();
+        int y = blockPos.y;
+        if (!world.dimension.isNether && world.getLevelProperties().getGamemode() != GameMode.ADVENTURE) {
             int i = Math.max(5, this.getSpawnProtectionRadius() - 6);
-            int j = MathHelper.floor(WorldPreview.world.getWorldBorder().getDistanceInsideBorder((double) blockPos.getX(), (double) blockPos.getZ()));
-            if (j < i) {
-                i = j;
-            }
-            if (j <= 1) {
-                i = 1;
-            }
-            Random random = new Random();
-            blockPos = WorldPreview.world.getTopPosition(blockPos.add(random.nextInt(i * 2) - i, 0, random.nextInt(i * 2) - i));
-            WorldPreview.player.refreshPositionAndAngles(blockPos, 0.0F, 0.0F);
-            while (!WorldPreview.world.doesBoxCollide(WorldPreview.player, WorldPreview.player.getBoundingBox()).isEmpty() && WorldPreview.player.y < 255.0D) {
-                WorldPreview.player.updatePosition(WorldPreview.player.x, WorldPreview.player.y + 1.0D, WorldPreview.player.z);
-            }
-            WorldPreview.spawnPos = new BlockPos(WorldPreview.player.x, WorldPreview.player.y, WorldPreview.player.z);
+            y = world.method_3708(blockPos.x += random.nextInt(i * 2) - i, blockPos.z += random.nextInt(i * 2) - i);
         }
+        WorldPreview.player.refreshPositionAndAngles((double)blockPos.x + 0.5, y, (double)blockPos.z + 0.5, 0.0f, 0.0f);
+        while (!world.doesBoxCollide(WorldPreview.player, WorldPreview.player.boundingBox).isEmpty()) {
+            WorldPreview.player.updatePosition(WorldPreview.player.x, WorldPreview.player.y + 1.0, WorldPreview.player.z);
+        }
+        WorldPreview.spawnPos = new BlockPos((int) WorldPreview.player.x, (int) WorldPreview.player.y, (int) WorldPreview.player.z);
     }
 
     /**
@@ -132,7 +128,7 @@ public abstract class MinecraftServerMixin {//  extends ReentrantThreadExecutor<
      */
     @Inject(method = "stopServer", at=@At(value = "HEAD"), cancellable = true)
     public void kill(CallbackInfo ci) {
-        if (!this.isLoading() && Thread.currentThread().equals(this.serverThread)) { //isLoading() should really be called isDoneLoading()
+        if (!this.isLoading() && Thread.currentThread().getName().equals("Server thread")) { //isLoading() should really be called isDoneLoading()
             worldpreview_shutdownWithoutSave();
             ci.cancel();
         }

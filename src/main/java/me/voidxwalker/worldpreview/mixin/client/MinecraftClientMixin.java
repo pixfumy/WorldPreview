@@ -7,8 +7,6 @@ import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.screen.TitleScreen;
 import net.minecraft.client.network.ClientPlayerInteractionManager;
-import net.minecraft.client.options.GameOptions;
-import net.minecraft.client.options.KeyBinding;
 import net.minecraft.client.sound.PositionedSoundInstance;
 import net.minecraft.client.sound.SoundManager;
 import net.minecraft.client.world.ClientWorld;
@@ -36,18 +34,11 @@ public abstract class MinecraftClientMixin {
 
     @Shadow private @Nullable IntegratedServer server;
 
-    @Shadow @Nullable public Entity cameraEntity;
-
     @Shadow private SoundManager soundManager;
 
     @Shadow private ClientConnection clientConnection;
 
     @Shadow public ClientWorld world;
-
-    @Shadow public abstract void openScreen(Screen screen);
-
-    @Shadow private boolean connectedToRealms;
-
     @Shadow public abstract void connect(ClientWorld world);
 
     @Shadow public boolean skipGameRender;
@@ -58,11 +49,7 @@ public abstract class MinecraftClientMixin {
 
     @Shadow public Screen currentScreen;
 
-    @Shadow public GameOptions options;
-
     @Shadow public boolean focused;
-
-    @Shadow public abstract ListenableFuture<Object> submit(Runnable task);
 
     @Redirect(method = "startIntegratedServer", at = @At(value = "INVOKE", target = "Ljava/lang/Thread;sleep(J)V"))
     private void cancelSleep(long l) {
@@ -83,7 +70,7 @@ public abstract class MinecraftClientMixin {
             this.connect((ClientWorld) null);
             if (WorldPreview.HAS_ATUM) {
                 AtumInterface.atumReset();
-                MinecraftClient.getInstance().openScreen(new TitleScreen());
+                MinecraftClient.getInstance().setScreen(new TitleScreen());
             }
             ci.cancel();
         } else if (Keyboard.isKeyDown(freezeKeyCode) && WorldPreview.inPreview && WorldPreview.loadedSpawn && WorldPreview.canFreeze && !WorldPreview.freezePreview) {
@@ -102,13 +89,6 @@ public abstract class MinecraftClientMixin {
     public void reset(ClientWorld world, String loadingMessage, CallbackInfo ci){
         synchronized (WorldPreview.lock) {
             WorldPreview.init();
-        }
-    }
-
-    @Inject(method = "getCameraEntity", at = @At("HEAD"), cancellable = true)
-    private void getWorldPreviewPlayer(CallbackInfoReturnable<Entity> cir) {
-        if (this.currentScreen instanceof TitleScreen) {
-            cir.setReturnValue(WorldPreview.player);
         }
     }
 }

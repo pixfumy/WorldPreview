@@ -3,10 +3,11 @@ package me.voidxwalker.worldpreview;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.options.KeyBinding;
+import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.render.WorldRenderer;
 import net.minecraft.client.world.ClientWorld;
 import net.minecraft.entity.player.ClientPlayerEntity;
+import net.minecraft.entity.player.ControllablePlayerEntity;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -21,7 +22,7 @@ import java.util.Properties;
 
 public class WorldPreview implements ClientModInitializer {
    public static World world;
-   public static ClientPlayerEntity player;
+   public static ControllablePlayerEntity player;
    public static ClientWorld clientWorld;
    public static boolean inPreview;
    public static BlockPos spawnPos;

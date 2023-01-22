@@ -6,18 +6,16 @@
   "client": [
     "access.WorldRendererMixin",
     "access.MinecraftClientMixin",
-    "access.GameRendererMixin",
     "access.ClientChunkProviderMixin",
     "access.ServerChunkProviderMixin",
-    "access.BuiltChunkStorageMixin",
-    "client.render.WorldRendererMixin",
-    "client.render.LoadingScreenRendererMixin",
     "client.MinecraftClientMixin",
     "client.GameOptionsMixin",
     "client.GameMenuScreenMixin",
+    "client.render.BufferBuilderMixin",
+    "client.render.LoadingScreenRendererMixin",
+    "client.render.WorldRendererMixin",
     "server.MinecraftServerMixin",
-    "server.ServerPlayerEntityMixin",
-    "RealmsBridgeMixin"
+    "server.ServerPlayerEntityMixin"
   ],
   "injectors": {
     "defaultRequire": 1

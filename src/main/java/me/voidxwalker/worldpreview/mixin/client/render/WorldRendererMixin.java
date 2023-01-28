@@ -120,6 +120,16 @@ public abstract class WorldRendererMixin implements PreviewRenderer {
         return this.client.field_6279;
     }
 
+    @Redirect(method = "reload", at = @At(value = "FIELD", target = "Lnet/minecraft/client/MinecraftClient;field_6279:Lnet/minecraft/entity/LivingEntity;"))
+    private LivingEntity getCorrectPlayer7(MinecraftClient instance) {
+        if (this.previewRenderer) {
+            return WorldPreview.player;
+        }
+        return this.client.field_6279;
+    }
+
+
+
 //    @Redirect(method = "renderEntities", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/MinecraftClient;getCameraEntity()Lnet/minecraft/entity/Entity;"))
 //    public Entity worldpreview_getCameraEntity2(MinecraftClient instance){
 //        if(instance.getCameraEntity()==null&&this.previewRenderer){

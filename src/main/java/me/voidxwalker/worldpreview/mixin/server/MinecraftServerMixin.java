@@ -17,6 +17,7 @@ import net.minecraft.util.collection.LongObjectStorage;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.ChunkPos;
 import net.minecraft.util.math.MathHelper;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.snooper.Snooper;
 import net.minecraft.world.Difficulty;
 import net.minecraft.world.GameMode;
@@ -115,6 +116,7 @@ public abstract class MinecraftServerMixin {//  extends ReentrantThreadExecutor<
             int i = Math.max(5, this.getSpawnProtectionRadius() - 6);
             y = world.method_3708(blockPos.x += random.nextInt(i * 2) - i, blockPos.z += random.nextInt(i * 2) - i);
         }
+        WorldPreview.player.heightOffset = 0.0f;
         WorldPreview.player.refreshPositionAndAngles((double)blockPos.x + 0.5, y, (double)blockPos.z + 0.5, 0.0f, 0.0f);
         while (!world.doesBoxCollide(WorldPreview.player, WorldPreview.player.boundingBox).isEmpty()) {
             WorldPreview.player.updatePosition(WorldPreview.player.x, WorldPreview.player.y + 1.0, WorldPreview.player.z);

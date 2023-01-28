@@ -80,6 +80,7 @@ public abstract class LoadingScreenRendererMixin {
     /**
      * @author Pixfumy
      * @reason This method is absolutely unrecognizable with all the changes. Any other mod targeting this method should know about this.
+     * TODO: This implementation (custom WorldRenderer and ClientWorld) is causing GL issues and no preview is being shown. We need to rethink this.
      */
     @Overwrite
     public void setProgressPercentage(int percentage) {
